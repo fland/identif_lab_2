@@ -17,20 +17,20 @@ public class Main {
     private static final Logger log = Logger.getLogger(Main.class);
 
     public static void main(String[] args) throws InvocationTargetException, InterruptedException, ClassNotFoundException, UnsupportedLookAndFeelException, IllegalAccessException, InstantiationException {
-        log.debug("App started...");
+        log.debug("App started ...");
 
         String input = "{{4, 2, 1}, {2, 4, 3}, {4, 9, 7}, {2, 2, 4}, {2, 3, 1}}";
 //        input.
         String values[] = input.split("\\}");
-        for(int i = 0; i < values.length; i++){
+        for (int i = 0; i < values.length; i++) {
             values[i] = values[i].replace("{{", "");
             values[i] = values[i].replace(", {", "");
         }
 
-        double [][] temp = new double[5][3];
-        for(int i = 0; i < values.length; i++){
+        double[][] temp = new double[5][3];
+        for (int i = 0; i < values.length; i++) {
             String row[] = values[i].split(", ");
-            for(int j = 0; j < row.length; j++){
+            for (int j = 0; j < row.length; j++) {
                 temp[i][j] = Double.valueOf(row[j]);
             }
         }
